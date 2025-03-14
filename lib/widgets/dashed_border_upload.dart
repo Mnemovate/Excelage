@@ -6,7 +6,11 @@ class DashedBorderUpload extends StatelessWidget {
   final String? fileName;
   final void Function()? onTap;
 
-  const DashedBorderUpload({super.key, required this.fileName, required this.onTap});
+  const DashedBorderUpload({
+    super.key,
+    required this.fileName,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -29,15 +33,15 @@ class DashedBorderUpload extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SvgPicture.asset(
-                  'assets/images/upload.svg', 
-                  width: 60,
+                  'assets/images/upload.svg',
+                  width: 50,
                   color: Color(0XFF524B6B),
                 ),
                 const SizedBox(height: 12),
                 Text(
                   fileName ?? 'Upload Excel',
                   style: const TextStyle(
-                    fontSize: 16,
+                    fontSize: 14,
                     color: Color(0XFF524B6B),
                   ),
                 ),
