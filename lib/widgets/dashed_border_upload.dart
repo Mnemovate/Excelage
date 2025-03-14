@@ -20,7 +20,7 @@ class DashedBorderUpload extends StatelessWidget {
         borderType: BorderType.RRect,
         radius: Radius.circular(12),
         dashPattern: [5, 5],
-        color: Color(0XFF524B6B),
+        color: fileName != 'Upload Excel' ? Color(0XFF346854) : Color(0XFF524B6B),
         strokeWidth: 2,
         child: Container(
           height: 180,
@@ -35,14 +35,14 @@ class DashedBorderUpload extends StatelessWidget {
                 SvgPicture.asset(
                   'assets/images/upload.svg',
                   width: 50,
-                  color: Color(0XFF524B6B),
+                  color: fileName != 'Upload Excel' ? Color(0XFF346854) : Color(0XFF524B6B),
                 ),
                 const SizedBox(height: 12),
                 Text(
-                  fileName ?? 'Upload Excel',
-                  style: const TextStyle(
+                  fileName!,
+                  style: TextStyle(
                     fontSize: 14,
-                    color: Color(0XFF524B6B),
+                    color: fileName != 'Upload Excel' ? Color(0XFF346854) : Color(0XFF524B6B),
                   ),
                 ),
               ],
