@@ -62,13 +62,12 @@ class ContactCard extends StatelessWidget {
                   ),
                 ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: 220,
-                    child: Text(
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
                       name,
                       overflow: TextOverflow.ellipsis,
                       style: GoogleFonts.dmSans(
@@ -77,16 +76,16 @@ class ContactCard extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                       ),
                     ),
-                  ),
-                  Text(
-                    gender,
-                    style: GoogleFonts.dmSans(
-                      color: Color(0XFF524B6B),
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
+                    Text(
+                      gender,
+                      style: GoogleFonts.dmSans(
+                        color: Color(0XFF524B6B),
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Container(
                 padding: const EdgeInsets.only(left: 28),
