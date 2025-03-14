@@ -89,10 +89,10 @@ class _FilePickerScreenState extends State<FilePickerScreen> {
             child: Text(
               'Excelage',
               style: GoogleFonts.dmSans(
-                        color: Color(0XFFFFFFFF),
-                        fontSize: 24,
-                        fontWeight: FontWeight.w700,
-                      ),
+                color: Color(0XFFFFFFFF),
+                fontSize: 18,
+                fontWeight: FontWeight.w700,
+              ),
             ),
           ),
           centerTitle: true,
@@ -122,7 +122,7 @@ class _FilePickerScreenState extends State<FilePickerScreen> {
                             'Upload Excel',
                             style: GoogleFonts.dmSans(
                               color: Color(0XFF150B3D),
-                              fontSize: 24,
+                              fontSize: 18,
                               fontWeight: FontWeight.w700,
                             ),
                           ),
@@ -131,7 +131,7 @@ class _FilePickerScreenState extends State<FilePickerScreen> {
                             'Add your Excel to manage',
                             style: GoogleFonts.dmSans(
                               color: Color(0XFF524B6B),
-                              fontSize: 16,
+                              fontSize: 14,
                               fontWeight: FontWeight.w400,
                             ),
                           ),
@@ -156,15 +156,8 @@ class _FilePickerScreenState extends State<FilePickerScreen> {
                             }
 
                             // dapatkan file excel
-                            File file = File(_fileName!);
-                            // dapatkan path file
-                            String path = file.path;
-                            // dapatkan nama file
-                            String name = file.path.split('/').last;
-                            // dapatkan ekstensi file
-                            String ext = name.split('.').last;
-                            
-
+                            // File file = File(_fileName!);
+                        
                             Fluttertoast.showToast(
                               msg: "Excel file uploaded successfully!",
                               toastLength: Toast.LENGTH_SHORT,
@@ -172,7 +165,7 @@ class _FilePickerScreenState extends State<FilePickerScreen> {
                               timeInSecForIosWeb: 2,
                               backgroundColor: Color(0XFF346854),
                               textColor: Color(0XFFFFFFFF),
-                              fontSize: 15
+                              fontSize: 14,
                             );
                           } else {
                             Fluttertoast.showToast(
@@ -182,7 +175,7 @@ class _FilePickerScreenState extends State<FilePickerScreen> {
                               timeInSecForIosWeb: 2,
                               backgroundColor: Color(0XFF9C3642),
                               textColor: Color(0XFFFFFFFF),
-                              fontSize: 15
+                              fontSize: 14,
                             );
                           }
                         },
@@ -191,7 +184,10 @@ class _FilePickerScreenState extends State<FilePickerScreen> {
                           width: 50,
                           height: 50,
                           decoration: BoxDecoration(
-                            color: excelData.isNotEmpty ? Color(0XFF346854) : Color(0XFF524B6B),
+                            color:
+                                excelData.isNotEmpty
+                                    ? Color(0XFF346854)
+                                    : Color(0XFF524B6B),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Center(
