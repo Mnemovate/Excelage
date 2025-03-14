@@ -86,12 +86,16 @@ class ContactCard extends StatelessWidget {
                   ),
                 ],
               ),
-              Spacer(),
-              Padding(
-                padding: const EdgeInsets.only(right: 10),
-                child: SvgPicture.asset(
-                  valid ? 'assets/images/check.svg' : 'assets/images/close.svg',
-                  semanticsLabel: valid ? 'Valid Icon' : 'Invalid Icon',
+              Expanded(
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 8),
+                    child: SvgPicture.asset(
+                      valid ? 'assets/images/check.svg' : 'assets/images/close.svg',
+                      semanticsLabel: valid ? 'Valid Icon' : 'Invalid Icon',
+                    ),
+                  ),
                 ),
               ),
             ],
