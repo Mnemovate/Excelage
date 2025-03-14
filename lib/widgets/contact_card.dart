@@ -3,7 +3,15 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ContactCard extends StatelessWidget {
-  const ContactCard({super.key, required this.number, required this.name, required this.gender, required this.valid, required this.phone, required this.date});
+  const ContactCard({
+    super.key,
+    required this.number,
+    required this.name,
+    required this.gender,
+    required this.valid,
+    required this.phone,
+    required this.date,
+  });
 
   final String number;
   final String name;
@@ -23,9 +31,9 @@ class ContactCard extends StatelessWidget {
         // boxShadow: [
         //   BoxShadow(
         //     color: Color(0XFFE1E5EB),
-        //     offset: Offset(0, 4),    
-        //     blurRadius: 62,          
-        //     spreadRadius: 0,         
+        //     offset: Offset(0, 4),
+        //     blurRadius: 62,
+        //     spreadRadius: 0,
         //   ),
         // ],
       ),
@@ -39,14 +47,14 @@ class ContactCard extends StatelessWidget {
                 height: 40,
                 decoration: BoxDecoration(
                   color: valid ? Color(0XFF346854) : Color(0XFF9C3642),
-                  borderRadius: BorderRadius.circular(10)
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: Center(
                   child: Text(
                     number,
                     style: GoogleFonts.dmSans(
                       color: Color(0XFFFFFFFF),
-                      fontSize: 15,
+                      fontSize: 14,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
@@ -71,11 +79,11 @@ class ContactCard extends StatelessWidget {
                   Text(
                     gender,
                     style: GoogleFonts.dmSans(
-                        color: Color(0XFF524B6B),
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                      ),
-                  )
+                      color: Color(0XFF524B6B),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
                 ],
               ),
               Spacer(),
@@ -110,7 +118,7 @@ class ContactCard extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -128,11 +136,11 @@ class ContactCard extends StatelessWidget {
                 Text(
                   date,
                   style: GoogleFonts.openSans(
-    color: Color(0XFF150B3D),
-    fontSize: 14,
-    fontWeight: FontWeight.w600
-  ),
-                )
+                    color: Color(0XFF150B3D),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
               ],
             ),
           ),
