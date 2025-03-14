@@ -180,9 +180,8 @@ class _FilePickerScreenState extends State<FilePickerScreen> {
                           }
                         },
                         child: Container(
-                          margin: EdgeInsets.only(right: 15),
-                          width: 50,
-                          height: 50,
+                          width: 45,
+                          height: 45,
                           decoration: BoxDecoration(
                             color:
                                 excelData.isNotEmpty
