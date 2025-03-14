@@ -40,6 +40,8 @@ class ContactCard extends StatelessWidget {
       child: Column(
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 margin: EdgeInsets.only(right: 15),
@@ -86,16 +88,11 @@ class ContactCard extends StatelessWidget {
                   ),
                 ],
               ),
-              Expanded(
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 8),
-                    child: SvgPicture.asset(
-                      valid ? 'assets/images/check.svg' : 'assets/images/close.svg',
-                      semanticsLabel: valid ? 'Valid Icon' : 'Invalid Icon',
-                    ),
-                  ),
+              Container(
+                padding: const EdgeInsets.only(left: 28),
+                child: SvgPicture.asset(
+                  valid ? 'assets/images/check.svg' : 'assets/images/close.svg',
+                  semanticsLabel: valid ? 'Valid Icon' : 'Invalid Icon',
                 ),
               ),
             ],
