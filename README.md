@@ -1,3 +1,3 @@
-# excelmanage
+# Excelage
 
 A new Flutter project.
